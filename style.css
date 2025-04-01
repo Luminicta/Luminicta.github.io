@@ -1,4 +1,31 @@
 body{
+    display: flex;
     background-color: black;
     color: white;
+}
+
+ul{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+a:link{
+    color: white;
+    text-decoration: none;
+}
+
+a:visited{
+    color: white;
+    text-decoration: none;
+}
+
+a:active{
+    color: white;
+    text-decoration: none;
+}
+
+a:hover{
+    color: white;
+    text-decoration: none;
 }
