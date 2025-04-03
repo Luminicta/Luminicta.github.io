@@ -2,37 +2,76 @@ body{
     display: flex;
     background-color: black;
     color: white;
+    margin: 0
 }
 
-.linkit{
+.links{
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
-a{
+.links__link{
     display: flex;
-    transition: background-color 0.5s ease-in-out 0.5s,
-    color 0.5s ease-in-out 0.5s;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
 }
 
-a:link{
-    color: white;
-    text-decoration: none;
-}
-
-a:visited{
-    color: white;
-    text-decoration: none;
-}
-
-a:hover{
+.links__link:hover a{
     background-color: white;
-    color: black;
-    text-decoration: none;
+    color: black ;
+    border: 2px solid white;
+    transform: scale(1.2);
 }
 
-a:active{
+.hoverpop{
+    animation: stayup 0.5s ease;
+}
+
+.popout1{
+    animation: popout 1s ease forwards;
+}
+
+.popout2{
+    animation: popout 1s ease 0.1s forwards;
+}
+
+.popout3{
+    animation: popout 1s ease 0.2s forwards;
+}
+
+.popout4{
+    animation: popout 1s ease 0.3s forwards;
+}
+
+@keyframes popout {
+    0%{transform:scale(0);
+        opacity: 0;
+    }
+    65%{opacity: 1;
+    }
+    80%{transform:scale(1.2);
+    }
+    100%{transform:scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes stayup {
+    0%{transform:scale(1)}
+    100%{transform:scale(1.2);}
+}
+
+li a{
+    display: block;
+    height: 100%;
+    width: 100%;
+    text-align: center;
     color: white;
+    border: 2px solid transparent;
     text-decoration: none;
+    transition: all 0.2s ease-in-out;
+    padding: 8px 5px 0 5px;
+    size: 100%
 }
